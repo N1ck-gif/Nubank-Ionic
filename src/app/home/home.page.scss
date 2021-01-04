@@ -1,27 +1,89 @@
-#container {
-  text-align: center;
+ion-header {
+  ion-toolbar {
+    --min-height: 100px;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    ion-title {
+      align-items: flex-end;
+
+      span {
+        font-size: 22px;
+        align-self: center;
+      } 
+
+      ion-button {
+        // com o display block, o botão ele ocupa uma linha só para ele
+        display: block;
+        box-shadow: 0 0 0;
+      }
+    }
+  }
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+ion-content {
+  .background {
+    .bank-information {
+      .qrcode {
+        width: 100px;
+        margin: 16px auto;
+        display: block;
+      }
+
+      span {
+        margin: 5px 0;
+        font-size: 14px;
+        display: block;
+      }
+    }
+
+    ion-list {
+      margin-top: 32px;
+      background: transparent;
+
+      ion-item {
+        color: #fff;
+        --background: transparent;
+        border-bottom: 0.55px solid rgba(255, 255, 255, 0.7);
+        // essa é uma propriedade do componente da seta que o ionic oferece
+        --detail-icon-opacity: 1;
+
+        ion-icon {
+          color: #fff;
+        }
+
+        // pegando o primeiro item da lista
+        &:first-of-type {
+          border-top: 0.55px solid rgba(255, 255, 255, 0.7);
+        }
+      }
+
+    }
+
+    .logout {
+      margin-top: 32px;
+      margin-bottom: 100px;
+    }
+  }
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+ion-footer {
+  ion-slide {
+    .container {
+      width: 100%;
+      height: 100px;
+      background: var(--ion-color-primary-tint);
+      padding: 10px;
+      margin: 0 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-  color: #8c8c8c;
+      ion-icon {
+        font-size: 24px;
+      }
 
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+      span {
+        font-size: 16px;
+      }
+    }
+  }
 }
